@@ -1,1 +1,5 @@
 <h1>Make My Day</h1>
+<%= form_tag(controller: 'welcome', action: 'index', method: 'post') do %>
+  <%= text_field_tag(:body) %>
+  <%= submit_tag('Make your day') %>
+<% end %>
