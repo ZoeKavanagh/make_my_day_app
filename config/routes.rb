@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
-  get 'welcome/index'
-  root 'welcome#index'
+  get 'mmd/index'
+  post 'mmd/index'
+  root 'mmd#index'
   get 'auth/:provider/callback', to: 'sessions#create'
   get 'auth/failure', to: redirect('/')
   get 'signout', to: 'sessions#destroy', as: 'signout'
