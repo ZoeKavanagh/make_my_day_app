@@ -1,0 +1,7 @@
+<h1>Make My Day</h1>
+<%= form_tag(controller: 'mmd', action: 'index', method: 'get') do %>
+  <%= date_field_tag(:date) %>
+  <%= submit_tag('Make your day') %>
+<% end %>
+
+<%= @events %>
