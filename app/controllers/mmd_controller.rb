@@ -9,9 +9,4 @@ class MmdController < ApplicationController
     response = Net::HTTP.get(uri)
     @events = JSON.parse(response)
   end
-
-  def request_from_api(params)
-
-  end
-
 end
