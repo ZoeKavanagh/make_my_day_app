@@ -6,7 +6,6 @@ RSpec.feature 'API request', type: :feature do
     visit '/'
     fill_in "date", with: '2018-07-01'
     click_button 'Make your day'
-    expect(page).to have_content('Teapot paiting')
-
+    expect(page).to have_content('Teapot painting')
   end
 end
