@@ -45,13 +45,13 @@ group :development, :test do
   gem 'rspec-rails', '~> 3.7'
   gem 'capybara'
   gem 'rack-test'
-  gem 'simplecov', require: false, group: :test
-  gem 'simplecov-console'
 end
 
 group :test do
   gem 'database_cleaner'
   gem 'rubocop'
+  gem 'simplecov', require: false, group: :test
+  gem 'simplecov-console', require: false, group: :test
 end
 
 group :development do

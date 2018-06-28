@@ -10,7 +10,6 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-
 ActiveRecord::Schema.define(version: 2018_06_28_095103) do
 
   # These are extensions that must be enabled in order to support this database
@@ -29,7 +28,7 @@ ActiveRecord::Schema.define(version: 2018_06_28_095103) do
     t.integer "user_id"
     t.string "user_name"
   end
-  
+
   create_table "users", force: :cascade do |t|
     t.string "provider"
     t.string "uid"
