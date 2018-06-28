@@ -15,6 +15,15 @@ ActiveRecord::Schema.define(version: 2018_06_28_095103) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
+  create_table "forms", force: :cascade do |t|
+    t.string "title"
+    t.string "my"
+    t.string "day"
+    t.text "form"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "groups", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
