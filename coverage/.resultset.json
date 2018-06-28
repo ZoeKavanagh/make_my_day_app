@@ -219,6 +219,13 @@
         null,
         null
       ],
+      "/Users/samworrall/Desktop/Projects/final_project/make_my_day_app/spec/factories/api_requests.rb": [
+        1,
+        1,
+        null,
+        null,
+        null
+      ],
       "/Users/samworrall/Desktop/Projects/final_project/make_my_day_app/spec/factories/users.rb": [
         1,
         1,
@@ -283,6 +290,14 @@
         null,
         1,
         null,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null,
+        null,
+        null,
         null
       ],
       "/Users/samworrall/Desktop/Projects/final_project/make_my_day_app/app/controllers/mmd_controller.rb": [
@@ -292,10 +307,7 @@
         1,
         null,
         1,
-        2,
-        2,
-        2,
-        2,
+        3,
         null,
         null
       ],
@@ -364,6 +376,41 @@
         1,
         null
       ],
+      "/Users/samworrall/Desktop/Projects/final_project/make_my_day_app/spec/models/api_request_spec.rb": [
+        1,
+        null,
+        1,
+        1,
+        null,
+        null,
+        2,
+        2,
+        2,
+        2,
+        null,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null,
+        null
+      ],
+      "/Users/samworrall/Desktop/Projects/final_project/make_my_day_app/app/models/api_request.rb": [
+        1,
+        1,
+        4,
+        4,
+        4,
+        4,
+        null,
+        null
+      ],
+      "/Users/samworrall/Desktop/Projects/final_project/make_my_day_app/app/models/application_record.rb": [
+        1,
+        1,
+        null
+      ],
       "/Users/samworrall/Desktop/Projects/final_project/make_my_day_app/spec/models/user_spec.rb": [
         1,
         null,
@@ -382,11 +429,6 @@
         0,
         null,
         null,
-        null
-      ],
-      "/Users/samworrall/Desktop/Projects/final_project/make_my_day_app/app/models/application_record.rb": [
-        1,
-        1,
         null
       ],
       "/Users/samworrall/Desktop/Projects/final_project/make_my_day_app/spec/views/home/show.html.erb_spec.rb": [
@@ -408,6 +450,6 @@
         null
       ]
     },
-    "timestamp": 1530113419
+    "timestamp": 1530179092
   }
 }
