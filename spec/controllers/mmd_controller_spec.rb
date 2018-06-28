@@ -9,5 +9,3 @@ RSpec.describe MmdController, type: :controller do
     end
   end
 end
-
-# This testing should eventually be on the model.
