@@ -10,4 +10,12 @@
   <p>Price: <%= event['price'] %></p>
 <% end %>
 
+<% if current_user %>
+  <% @group_user = GroupUser.where(user_id: current_user.id) %>
+  <% @group_user.each do |group_user| %>
+  <% @group = Group.find_by(id: group_user.group_id) %>
+  <%= link_to @group.name, group_path(@group)%>
+  <% end %>
+<% end %>
+
 <%= link_to 'Create New Group', new_group_path %>
