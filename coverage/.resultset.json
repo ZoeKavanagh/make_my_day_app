@@ -21,7 +21,33 @@
         1,
         null
       ],
-      "/Users/salomelambermont/Desktop/Makers/week11/make_my_day_app/app/controllers/groups_controller.rb": [
+      "/Users/salomelambermont/Desktop/Makers/week11/make_my_day_app/app/models/user.rb": [
+        1,
+        null,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        null,
+        null,
+        null
+      ],
+      "/Users/salomelambermont/Desktop/Makers/week11/make_my_day_app/app/models/application_record.rb": [
+        1,
+        1,
+        null
+      ],
+      "/Users/salomelambermont/Desktop/Makers/week11/make_my_day_app/app/controllers/mmd_controller.rb": [
+        1,
+        1,
+        null,
+        1,
+        null,
         1,
         1,
         null,
@@ -33,58 +59,28 @@
         1,
         null,
         1,
-        4,
-        null,
-        null
-      ],
-      "/Users/salomelambermont/Desktop/Makers/week11/make_my_day_app/app/controllers/mmd_controller.rb": [
-        1,
-        1,
-        null,
-        1,
-        null,
-        1,
-        4,
-        null,
-        null
-      ],
-      "/Users/salomelambermont/Desktop/Makers/week11/make_my_day_app/app/controllers/sessions_controller.rb": [
-        1,
-        1,
-        0,
-        0,
-        0,
-        null,
-        null,
-        1,
-        0,
-        0,
+        2,
         null,
         null
       ],
       "/Users/salomelambermont/Desktop/Makers/week11/make_my_day_app/app/models/api_request.rb": [
         1,
         1,
-        5,
-        5,
-        5,
-        5,
+        1,
+        1,
+        1,
+        1,
         null,
         null
       ],
-      "/Users/salomelambermont/Desktop/Makers/week11/make_my_day_app/app/models/application_record.rb": [
+      "/Users/salomelambermont/Desktop/Makers/week11/make_my_day_app/app/controllers/groups_controller.rb": [
         1,
         1,
+        1,
+        null,
         null
       ],
-      "/Users/salomelambermont/Desktop/Makers/week11/make_my_day_app/app/models/user.rb": [
-        1,
-        null,
-        1,
-        1,
-        null,
-        1,
-        0,
+      "/Users/salomelambermont/Desktop/Makers/week11/make_my_day_app/app/controllers/sessions_controller.rb": [
         0,
         0,
         0,
@@ -92,10 +88,13 @@
         0,
         0,
         null,
-        null,
-        null
+        0,
+        0,
+        0,
+        0,
+        0
       ]
     },
-    "timestamp": 1530268476
+    "timestamp": 1530275071
   }
 }
