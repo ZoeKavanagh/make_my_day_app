@@ -1,4 +1,5 @@
-<ul> <% @users.each do |user| %>
-  <li> <%= user.name %> </li>
+<form action='group#create' method='post'>
+  <% @users.each do |user| %>
+  <input type='checkbox' name='user' value="<% user.name %>"> <%= user.name %></br>
   <% end %>
-</ul>
+</form>
