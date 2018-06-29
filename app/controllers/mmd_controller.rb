@@ -4,6 +4,6 @@ require 'json'
 class MmdController < ApplicationController
 
   def index
-    @events = ApiRequest.make_request(params[:date])
+    @events = ApiRequest.make_request(params[:date], params[:location], params[:price_range])
   end
 end
