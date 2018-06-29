@@ -1,13 +1,10 @@
-<!-- <form action='group#create' method='post'>
-  <% @users.each do |user| %>
-  <input type='checkbox' name='user' value="<% user.name %>"> <%= user.name %></br>
-  <% end %>
-</form> -->
-
 <%= form_for @group do |form| %>
-  <% @users.each do |user| %>
-    <%= form.check_box user.name %>
+  <%= form.label 'Users' %>
+  <%= form.collection_check_boxes :user_ids, @users, :id, :name do |b| %>
+    <%= b.check_box %>
+    <%= b.label %>
   <% end %>
+
   <%= form.label :name %>
   <%= form.text_area :name %>
   <%= form.submit "Create Group" %>

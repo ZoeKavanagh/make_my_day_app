@@ -29,20 +29,21 @@
         null,
         null,
         1,
-        1,
-        1,
+        2,
+        2,
+        3,
+        null,
+        2,
         null,
         null,
         1,
+        2,
+        null,
+        null,
         1,
         null,
-        null,
-        null,
         1,
-        null,
-        1,
-        1,
-        null,
+        2,
         null,
         null
       ],
@@ -52,7 +53,7 @@
         1,
         null,
         1,
-        10,
+        13,
         null,
         null
       ],
@@ -98,9 +99,17 @@
       ],
       "/Users/salomelambermont/Desktop/Makers/week11/make_my_day_app/app/models/group.rb": [
         1,
+        1,
+        null
+      ],
+      "/Users/salomelambermont/Desktop/Makers/week11/make_my_day_app/app/models/group_user.rb": [
+        1,
+        1,
+        1,
         null
       ],
       "/Users/salomelambermont/Desktop/Makers/week11/make_my_day_app/app/models/user.rb": [
+        1,
         1,
         null,
         1,
@@ -117,6 +126,6 @@
         null
       ]
     },
-    "timestamp": 1530282008
+    "timestamp": 1530287899
   }
 }

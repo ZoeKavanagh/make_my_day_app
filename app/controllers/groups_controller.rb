@@ -6,6 +6,9 @@ class GroupsController < ApplicationController
 
   def create
     @group = Group.create(group_params)
+      (params[:group][:user_ids]).each do |i|
+      GroupUser.create({user_id: params[:group][:user_ids][i.to_i], group_id: @group.id})
+    end
     redirect_to @group
   end
 
@@ -13,11 +16,9 @@ class GroupsController < ApplicationController
     @group = Group.find(params[:id])
   end
 
-
   private
 
   def group_params
     params.require(:group).permit(:name)
   end
-
 end
