@@ -19,5 +19,11 @@ RSpec.describe GroupsController, type: :controller do
     end
   end
 
-
+  describe('#show') do
+    it "return http success" do
+      user = FactoryBot.create(:group)
+      get :show, params: { id: user.id }
+      expect(response).to have_http_status(200)
+    end
+  end
 end
