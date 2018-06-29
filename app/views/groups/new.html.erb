@@ -2,7 +2,10 @@
   <% @users.each do |user| %>
   <input type='checkbox' name='user' value="<% user.name %>"> <%= user.name %></br>
   <% end %>
-
-  Group Name: <input type='text' name='Group Name'>
-  <input type='button' value='Create Group'>
 </form>
+
+<%= form_for @group do |form| %>
+  <%= form.label :name %>
+  <%= form.text_area :name %>
+  <%= form.submit "Create Group" %>
+<% end %>
