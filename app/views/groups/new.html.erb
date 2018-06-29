@@ -1,1 +1,8 @@
-<h1>New Group</h1>
+<form action='group#create' method='post'>
+  <% @users.each do |user| %>
+  <input type='checkbox' name='user' value="<% user.name %>"> <%= user.name %></br>
+  <% end %>
+
+  Group Name: <input type='text' name='Group Name'>
+  <input type='button' value='Create Group'>
+</form>
