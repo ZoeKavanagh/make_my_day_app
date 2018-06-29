@@ -1,13 +1,18 @@
 <h1>Make My Day</h1>
 <%= form_tag(controller: 'mmd', action: 'index', method: 'get') do %>
-  <%= date_field_tag(:date) %>
+  Date: <%= date_field_tag(:date) %>
+  Location: <%= text_field_tag(:location) %>
+  Price Range: <%= text_field_tag(:price_range) %>
   <%= submit_tag('Make your day') %>
 <% end %>
 
 <% @events.each do |event| %>
   <h2><%= event['title'] %></h2>
   <p>Description: <%= event['description'] %></p>
-  <p>Price: <%= event['price'] %></p>
+  <p>Price Range: <%= event['price_range'] %></p>
+  <p>Location: <%= event['location'] %></p>
+  <p>Url: <%= event['url'] %></p>
+  <p>Category: <%= event['category'] %></p>
 <% end %>
 
 <% if current_user %>

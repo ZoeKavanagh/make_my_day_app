@@ -440,6 +440,7 @@
       </tr>
       
       <tr>
+
         <td class="strong"><a href="#9269a9cf22b53b60ad20dbb81a0fa476c1486ca1" class="src_link" title="app/helpers/groups_helper.rb">app/helpers/groups_helper.rb</a></td>
         <td class="green strong">100.0 %</td>
         <td>2</td>
@@ -790,6 +791,42 @@
         <li class="never" data-hits="" data-linenumber="24">
           
           
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="6">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  def create</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="7">
+          
+          
+          <code class="ruby">    </code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="8">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="9">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="10">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="11">
+          
+          
           <code class="ruby">end</code>
         </li>
       
@@ -799,6 +836,7 @@
 
       
         <div class="source_table" id="48e14b737c657965fc8ebc68cbcf18eef8e06a52">
+
   <div class="header">
     <h3>app/controllers/mmd_controller.rb</h3>
     <h4><span class="green">100.0 %</span> covered</h4>
@@ -851,7 +889,7 @@
         <li class="covered" data-hits="8" data-linenumber="7">
           <span class="hits">8</span>
           
-          <code class="ruby">    @events = ApiRequest.make_request(params[:date])</code>
+          <code class="ruby">    @events = ApiRequest.make_request(params[:date], params[:location], params[:price_range])</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="8">
@@ -870,7 +908,6 @@
   </pre>
 </div>
 
-      
         <div class="source_table" id="bd6e5d4c52388bd9998599d9571c7f36a2662aaa">
   <div class="header">
     <h3>app/controllers/sessions_controller.rb</h3>
@@ -961,7 +998,6 @@
   </pre>
 </div>
 
-      
         <div class="source_table" id="ced6a1d7df67fabf3d738919b220274c04f55746">
   <div class="header">
     <h3>app/helpers/application_helper.rb</h3>
@@ -1023,8 +1059,8 @@
   </pre>
 </div>
 
-      
         <div class="source_table" id="54e18780b01bc53ae80dc86a7cd99cbdcd842ed9">
+
   <div class="header">
     <h3>app/helpers/sessions_helper.rb</h3>
     <h4><span class="green">100.0 %</span> covered</h4>
@@ -1056,6 +1092,7 @@
 
       
         <div class="source_table" id="73fb268f1df7fcff06321023eb69b2bc2c243b3f">
+
   <div class="header">
     <h3>app/helpers/users_helper.rb</h3>
     <h4><span class="green">100.0 %</span> covered</h4>
@@ -1087,6 +1124,7 @@
 
       
         <div class="source_table" id="b265dd5375e0222d3e4e3ed694329fbdf887b39d">
+
   <div class="header">
     <h3>app/helpers/welcome_helper.rb</h3>
     <h4><span class="green">100.0 %</span> covered</h4>
@@ -1118,6 +1156,7 @@
 
       
         <div class="source_table" id="2f2ca8d6a097d383f8d830f94387a0dfef978c0e">
+
   <div class="header">
     <h3>app/models/api_request.rb</h3>
     <h4><span class="green">100.0 %</span> covered</h4>
@@ -1140,13 +1179,13 @@
         <li class="covered" data-hits="1" data-linenumber="2">
           <span class="hits">1</span>
           
-          <code class="ruby">  def self.make_request(params)</code>
+          <code class="ruby">  def self.make_request(date, location, price_range)</code>
         </li>
       
         <li class="covered" data-hits="9" data-linenumber="3">
           <span class="hits">9</span>
           
-          <code class="ruby">    url = &quot;https://stark-brook-82296.herokuapp.com/events?date=#{params}&quot;</code>
+          <code class="ruby">    url = &quot;https://stark-brook-82296.herokuapp.com/events?date=#{date}&amp;location=#{location}&amp;price_range=#{price_range}&quot;</code>
         </li>
       
         <li class="covered" data-hits="9" data-linenumber="4">
@@ -1185,6 +1224,7 @@
 
       
         <div class="source_table" id="7cc6c318917ee9e972d1dd929ca46e5235379e9a">
+
   <div class="header">
     <h3>app/models/application_record.rb</h3>
     <h4><span class="green">100.0 %</span> covered</h4>
