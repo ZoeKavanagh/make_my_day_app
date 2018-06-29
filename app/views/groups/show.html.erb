@@ -1,1 +1,7 @@
 <h1> <%= @group.name %></h1>
+
+<ul> <% @group_users = GroupUser.where(group_id: @group.id) %>
+  <% @group_users.each do |user| %>
+  <li> <%= User.find_by(id: user.user_id).name %> </li>
+  <% end %>
+</ul

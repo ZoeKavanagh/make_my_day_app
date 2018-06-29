@@ -23,12 +23,12 @@ RSpec.feature 'Creating new group', type: :feature do
   end
 
   scenario 'User can add other users to group' do
-    FactoryBot.create(:user)
+    FactoryBot.create(:user, name: 'Beatrice Jerkins')
     visit '/'
     click_link 'Create New Group'
     fill_in 'group_name', with: 'The Group'
-    page.check('MyString')
+    page.check('group_user_ids_1')
     click_button 'Create Group'
-    expect(page).to have_content('Gertrude Pondsworth')
+    expect(page).to have_content('MyString')
   end
 end
