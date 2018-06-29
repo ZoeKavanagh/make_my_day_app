@@ -14,10 +14,11 @@ RSpec.feature 'Creating new group', type: :feature do
     expect(page).to have_content('MyString')
   end
 
-  # scenario 'User can enter group name' do
-  #   visit '/'
-  #   click_link 'Create New Group'
-  #   fill_in 'Group Name', with: 'The Group'
-  #
-  # end
+  scenario 'User can enter group name' do
+    visit '/'
+    click_link 'Create New Group'
+    fill_in 'Group Name', with: 'The Group'
+    click_button 'Create Group'
+    expect(page).to have_current_path(group_path)
+  end
 end
