@@ -1,0 +1,8 @@
+<% @events.each do |event| %>
+  <h2><%= event['title'] %></h2>
+  <p>Description: <%= event['description'] %></p>
+  <p>Price Range: <%= event['price_range'] %></p>
+  <p>Location: <%= event['location'] %></p>
+  <p>Url: <%= event['url'] %></p>
+  <p>Category: <%= event['category'] %></p>
+<% end %>

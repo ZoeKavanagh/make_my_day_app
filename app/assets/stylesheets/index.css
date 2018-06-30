@@ -1,0 +1,33 @@
+.banner {
+  height: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url('friends2.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.banner a {
+  font-family: 'Dosis', sans-serif;
+  font-weight: bold;
+  font-size: 1.5rem;
+  text-decoration: none;
+  border: 2px solid white;
+  border-radius: 25px;
+  color: white;
+  padding: 1.5rem 3.5rem;
+  margin: 4rem;
+}
+
+.banner a:hover {
+  background: rgba(0, 0, 0, 0.1);
+  padding: 1.6rem 3.6rem;
+}
+
+#make-my-day-form {
+  height: 50rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
