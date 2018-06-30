@@ -33,6 +33,9 @@
         4,
         9,
         null,
+        null,
+        null,
+        null,
         4,
         null,
         null,
@@ -53,7 +56,7 @@
         1,
         null,
         1,
-        20,
+        26,
         null,
         null
       ],
@@ -66,12 +69,15 @@
         1,
         8,
         null,
+        null,
+        null,
+        null,
+        null,
         null
       ],
       "/Users/salomelambermont/Desktop/Makers/week11/make_my_day_app/app/controllers/sessions_controller.rb": [
         1,
         1,
-        0,
         0,
         0,
         0,
@@ -126,6 +132,6 @@
         null
       ]
     },
-    "timestamp": 1530307376
+    "timestamp": 1530376634
   }
 }
