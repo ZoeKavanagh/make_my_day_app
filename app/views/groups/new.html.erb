@@ -1,11 +1,26 @@
-<%= form_for @group do |form| %>
-  <%= form.label 'Users' %>
-  <%= form.collection_check_boxes :user_ids, @users, :id, :name do |b| %>
-    <%= b.check_box %>
-    <%= b.label %>
-  <% end %>
+<% stylesheet_link_tag 'new_group.css' %>
 
-  <%= form.label :name %>
-  <%= form.text_area :name %>
-  <%= form.submit "Create Group" %>
-<% end %>
+<div class='group-form'>
+  <%= form_for @group do |form| %>
+
+    <div class='group-name'>
+      <%= form.label 'Enter group name:' %>
+      <%= form.text_area :name %>
+    </div>
+
+    <div class="users-list">
+      <div>Add friends:</div>
+      <div class='checklist'>
+        <%= form.collection_check_boxes :user_ids, @users, :id, :name do |b| %>
+          <div class='checklist-user'>
+            <%= b.check_box %>
+            <%= b.label %>
+          </div>
+        <% end %>
+      </div>
+    </div>
+
+    <%= form.submit "Create Group" %>
+
+  <% end %>
+</div>
