@@ -1,12 +1,11 @@
 <%= stylesheet_link_tag  'index.css' %>
+
 <div class='banner'>
   <%= link_to 'Make My Day', '#make-my-day-form' %>
-  <%= link_to 'Make Our Day' %>
+  <%= link_to 'Make Our Day', new_group_path %>
 </div>
 
 <div id='make-my-day-form'>
   <%= render 'activities_form' %>
 </div>
 <!-- <%= render 'events' %> -->
-
-<%= link_to 'Create New Group', new_group_path %>

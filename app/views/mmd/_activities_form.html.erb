@@ -2,9 +2,12 @@
 
 <div class='form'>
   <%= form_tag(controller: 'mmd', action: 'index', method: 'get') do %>
-    Date: <%= date_field_tag(:date) %>
-    Location: <%= text_field_tag(:location) %>
-    Price Range: <%= text_field_tag(:price_range) %>
-    <%= submit_tag('Make your day') %>
+    <%= label_tag :date %>
+    <%= date_field_tag(:date) %>
+    <%= label_tag :location %>
+    <%= select_tag :location, options_for_select(['London', 'Edinburgh', 'Glasgow']) %>
+    <%= label_tag :budget %>
+    <%= select_tag :price_range, options_for_select([1,2,3]) %>
+    <%= submit_tag('Make My Day') %>
   <% end %>
 </div>
