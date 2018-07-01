@@ -4,4 +4,18 @@
   <% @group_users.each do |user| %>
   <li> <%= User.find_by(id: user.user_id).name %> </li>
   <% end %>
-</ul
+</ul>
+
+<div id="group_posts">
+  <% @group.posts.each do |post| %>
+  <%= post.content %>
+  <% end %>
+</div>
+
+<div id="post_form">
+  <%= form_for [@group, @post] do |form| %>
+  <%= form.label :post %>
+  <%= form.text_area :content %>
+  <%= form.submit "Send Message" %>
+  <% end %>
+</div>
