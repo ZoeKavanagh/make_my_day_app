@@ -1,26 +1,14 @@
-<h1>Make My Day</h1>
-<%= form_tag(controller: 'mmd', action: 'index', method: 'get') do %>
-  Date: <%= date_field_tag(:date) %>
-  Location: <%= text_field_tag(:location) %>
-  Price Range: <%= text_field_tag(:price_range) %>
-  <%= submit_tag('Make your day') %>
-<% end %>
+<%= stylesheet_link_tag  'index.css' %>
 
-<% @events.each do |event| %>
-  <h2><%= event['title'] %></h2>
-  <p>Description: <%= event['description'] %></p>
-  <p>Price Range: <%= event['price_range'] %></p>
-  <p>Location: <%= event['location'] %></p>
-  <p>Url: <%= event['url'] %></p>
-  <p>Category: <%= event['category'] %></p>
-<% end %>
+<div class='banner'>
+  <%= link_to 'Make My Day', '#make-my-day-form' %>
+  <%= link_to 'Make Our Day', new_group_path %>
+</div>
 
-<% if current_user %>
-  <% @group_user = GroupUser.where(user_id: current_user.id) %>
-  <% @group_user.each do |group_user| %>
-  <% @group = Group.find_by(id: group_user.group_id) %>
-  <%= link_to @group.name, group_path(@group)%>
-  <% end %>
-<% end %>
+<div id='make-my-day-form'>
+  <%= render 'activities_form' %>
+</div>
 
-<%= link_to 'Create New Group', new_group_path %>
+<div id='events'>
+  <%= render 'events' %>
+</div>

@@ -1,0 +1,58 @@
+.form {
+  font-family: 'Dosis', sans-serif;
+  margin: 10px auto;
+  padding: 16px;
+  background: #F7F7F7;
+}
+
+form {
+  display: flex;
+  align-items: center;
+}
+
+.form label {
+  margin: 1.5rem;
+}
+
+.form input[type="date"],
+.form select {
+  -webkit-transition: all 0.30s ease-in-out;
+  -moz-transition: all 0.30s ease-in-out;
+  -ms-transition: all 0.30s ease-in-out;
+  -o-transition: all 0.30s ease-in-out;
+  outline: none;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  height: 1.5rem;
+  background: #fff;
+  border: 1px solid #ccc;
+  padding: 3%;
+  color: #555;
+  font-family: 'Dosis', sans-serif;
+}
+
+.form input[type="date"]:focus,
+.form select:focus {
+  box-shadow: 0 0 5px #c2d8fc;
+  border: 1px solid #c2d8fc;
+}
+
+.form input[type="submit"] {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  width: 12rem;
+  padding: 3%;
+  background: #86b0f4;
+  border: none;
+  border-radius: 25px;
+  color: white;
+  margin: 0.5rem 1.5rem;
+  font-family: 'Nothing You Could Do', cursive;
+  font-size: 1.2rem;
+}
+
+.form input[type="submit"]:hover {
+  background: #c2d8fc;
+}

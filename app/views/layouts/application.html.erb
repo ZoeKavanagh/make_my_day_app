@@ -1,25 +1,44 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>MakeMyDayApp</title>
+    <title>Make My Day</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
+    <link href="https://fonts.googleapis.com/css?family=Dosis|Nothing+You+Could+Do" rel="stylesheet">
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
-    <div>
-      <% if current_user %>
-        Signed in as <strong><%= current_user.name %></strong>!
-        <%= link_to "Sign out", signout_path, id: "sign_out" %>
-      <% else %>
-        <%= link_to "Sign in with Google", "/auth/google_oauth2", id: "sign_in" %>
-      <% end %>
-    </div>
-    <div>
+    <header>
+      <h1>Make My Day</h1>
+      <div class='header-right'>
+        <% if current_user %>
+          <span> Signed in as <%= current_user.name %>! </span>
+          <span> <%= link_to "Sign out", signout_path, id: "sign_out" %> </span>
+        <% else %>
+          <%= link_to "Sign in with Google", "/auth/google_oauth2", id: "sign_in" %>
+        <% end %>
+
+        <% if current_user %>
+          <div class="dropdown">
+            <button class="dropbtn">My groups</button>
+            <div class="dropdown-content">
+              <% @relationships = GroupUser.where(user_id: current_user.id) %>
+              <% @relationships.each do |group_user| %>
+              <% @group = Group.find_by(id: group_user.group_id) %>
+              <%= link_to @group.name, group_path(@group)%>
+              <% end %>
+            </div>
+          </div>
+        <% end %>
+      </div>
+    </header>
+
+    <div class='content'>
     <%= yield %>
     </div>
+
   </body>
 </html>

@@ -3,6 +3,6 @@ class ApiRequest < ApplicationRecord
     url = "https://stark-brook-82296.herokuapp.com/events?date=#{date}&location=#{location}&price_range=#{price_range}"
     uri = URI(url)
     response = Net::HTTP.get(uri)
-    result = JSON.parse(response)
+    JSON.parse(response)
   end
 end
