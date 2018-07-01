@@ -1,6 +1,9 @@
 require 'rails_helper'
 
 RSpec.describe PostsController, type: :controller do
+  before(:each) do
+      @group = FactoryBot.create(:group)
+    end
 
   describe "GET #new" do
     it "returns http success" do
@@ -9,11 +12,9 @@ RSpec.describe PostsController, type: :controller do
     end
   end
 
-  describe "GET #create" do
-    it "returns http success" do
-      get :create
-      expect(response).to have_http_status(200)
+  describe "POST #create" do
+    it "creates a post" do
+      expect { post :create, params: { post: { content: 'Hello World!' } } }.to change { Post.count }.by(1)
     end
   end
-
 end

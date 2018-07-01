@@ -9,7 +9,7 @@
 
 <h2>Group Chat:</h2>
 <div id="group_posts">
-  <% @group.posts.reverse.each do |post| %>
+  <% @group_posts.each do |post| %>
   <% @post_author = User.find_by(id: post.user_id) %>
   <%= @post_author.name %>: <%= post.content %><br>
   <% end %>
