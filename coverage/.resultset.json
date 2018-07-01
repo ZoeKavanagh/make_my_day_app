@@ -1,27 +1,31 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/salomelambermont/Desktop/Makers/week11/make_my_day_app/app/helpers/application_helper.rb": [
+      "/Users/samworrall/Desktop/Projects/final_project/make_my_day_app/app/helpers/application_helper.rb": [
         1,
         null
       ],
-      "/Users/salomelambermont/Desktop/Makers/week11/make_my_day_app/app/helpers/groups_helper.rb": [
+      "/Users/samworrall/Desktop/Projects/final_project/make_my_day_app/app/helpers/groups_helper.rb": [
         1,
         null
       ],
-      "/Users/salomelambermont/Desktop/Makers/week11/make_my_day_app/app/helpers/sessions_helper.rb": [
+      "/Users/samworrall/Desktop/Projects/final_project/make_my_day_app/app/helpers/posts_helper.rb": [
         1,
         null
       ],
-      "/Users/salomelambermont/Desktop/Makers/week11/make_my_day_app/app/helpers/users_helper.rb": [
+      "/Users/samworrall/Desktop/Projects/final_project/make_my_day_app/app/helpers/sessions_helper.rb": [
         1,
         null
       ],
-      "/Users/salomelambermont/Desktop/Makers/week11/make_my_day_app/app/helpers/welcome_helper.rb": [
+      "/Users/samworrall/Desktop/Projects/final_project/make_my_day_app/app/helpers/users_helper.rb": [
         1,
         null
       ],
-      "/Users/salomelambermont/Desktop/Makers/week11/make_my_day_app/app/controllers/groups_controller.rb": [
+      "/Users/samworrall/Desktop/Projects/final_project/make_my_day_app/app/helpers/welcome_helper.rb": [
+        1,
+        null
+      ],
+      "/Users/samworrall/Desktop/Projects/final_project/make_my_day_app/app/controllers/groups_controller.rb": [
         1,
         1,
         5,
@@ -50,7 +54,7 @@
         null,
         null
       ],
-      "/Users/salomelambermont/Desktop/Makers/week11/make_my_day_app/app/controllers/application_controller.rb": [
+      "/Users/samworrall/Desktop/Projects/final_project/make_my_day_app/app/controllers/application_controller.rb": [
         1,
         1,
         1,
@@ -60,7 +64,7 @@
         null,
         null
       ],
-      "/Users/salomelambermont/Desktop/Makers/week11/make_my_day_app/app/controllers/mmd_controller.rb": [
+      "/Users/samworrall/Desktop/Projects/final_project/make_my_day_app/app/controllers/mmd_controller.rb": [
         1,
         1,
         null,
@@ -75,7 +79,16 @@
         null,
         null
       ],
-      "/Users/salomelambermont/Desktop/Makers/week11/make_my_day_app/app/controllers/sessions_controller.rb": [
+      "/Users/samworrall/Desktop/Projects/final_project/make_my_day_app/app/controllers/posts_controller.rb": [
+        1,
+        1,
+        null,
+        null,
+        1,
+        null,
+        null
+      ],
+      "/Users/samworrall/Desktop/Projects/final_project/make_my_day_app/app/controllers/sessions_controller.rb": [
         1,
         1,
         0,
@@ -89,7 +102,7 @@
         null,
         null
       ],
-      "/Users/salomelambermont/Desktop/Makers/week11/make_my_day_app/app/models/api_request.rb": [
+      "/Users/samworrall/Desktop/Projects/final_project/make_my_day_app/app/models/api_request.rb": [
         1,
         1,
         8,
@@ -99,23 +112,31 @@
         null,
         null
       ],
-      "/Users/salomelambermont/Desktop/Makers/week11/make_my_day_app/app/models/application_record.rb": [
+      "/Users/samworrall/Desktop/Projects/final_project/make_my_day_app/app/models/application_record.rb": [
         1,
         1,
         null
       ],
-      "/Users/salomelambermont/Desktop/Makers/week11/make_my_day_app/app/models/group.rb": [
-        1,
-        1,
-        null
-      ],
-      "/Users/salomelambermont/Desktop/Makers/week11/make_my_day_app/app/models/group_user.rb": [
+      "/Users/samworrall/Desktop/Projects/final_project/make_my_day_app/app/models/group.rb": [
         1,
         1,
         1,
         null
       ],
-      "/Users/salomelambermont/Desktop/Makers/week11/make_my_day_app/app/models/user.rb": [
+      "/Users/samworrall/Desktop/Projects/final_project/make_my_day_app/app/models/group_user.rb": [
+        1,
+        1,
+        1,
+        null
+      ],
+      "/Users/samworrall/Desktop/Projects/final_project/make_my_day_app/app/models/post.rb": [
+        1,
+        1,
+        1,
+        null
+      ],
+      "/Users/samworrall/Desktop/Projects/final_project/make_my_day_app/app/models/user.rb": [
+        1,
         1,
         1,
         null,
@@ -132,6 +153,6 @@
         null
       ]
     },
-    "timestamp": 1530456233
+    "timestamp": 1530460804
   }
 }

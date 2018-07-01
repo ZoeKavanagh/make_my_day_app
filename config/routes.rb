@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'posts/new'
+  get 'posts/create'
   get 'mmd/index'
   post 'mmd/index'
   root 'mmd#index'
