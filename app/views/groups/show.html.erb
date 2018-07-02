@@ -1,11 +1,3 @@
-<div class='group-info'>
-  <% @group_users = GroupUser.where(group_id: @group.id) %>
-  <% @group_users.each do |user| %>
-    <div> <%= User.find_by(id: user.user_id).name %> </div>
-  <% end %>
-</div>
-
-
 <div class='main-body'>
   <div class='calendar'>
     <div class='calendar-header'>
@@ -31,7 +23,13 @@
   </div>
 
   <div class='chat'>
-    <h1> <%= @group.name %></h1>
+    <div class='group-info'>
+      <h1> <%= @group.name %></h1>
+      <% @group_users = GroupUser.where(group_id: @group.id) %>
+      <% @group_users.each do |user| %>
+        <span> <%= User.find_by(id: user.user_id).name %>   </span>
+      <% end %>
+    </div>
 
     <div id="group_posts">
       <% @group_posts.each do |post| %>
