@@ -14,7 +14,7 @@
       <img src="./assets/0.10.2/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2018-07-02T14:27:34+01:00">2018-07-02T14:27:34+01:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2018-07-02T14:38:48+01:00">2018-07-02T14:38:48+01:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -25,15 +25,15 @@
      covered at
      <span class="covered_strength">
        <span class="green">
-         2.83
+         2.92
        </span>
     </span> hits/line)
   </h2>
   <a name="AllFiles"></a>
   <div>
     <b>17</b> files in total.
-    <b>88</b> relevant lines. 
-    <span class="green"><b>88</b> lines covered</span> and
+    <b>79</b> relevant lines. 
+    <span class="green"><b>79</b> lines covered</span> and
     <span class="red"><b>0</b> lines missed </span>
   </div>
   <table class="file_list">
@@ -213,11 +213,11 @@
       <tr>
         <td class="strong"><a href="#75acc42fedbea85304738c274b96fe6044f78abd" class="src_link" title="app/models/user.rb">app/models/user.rb</a></td>
         <td class="green strong">100.0 %</td>
-        <td>24</td>
-        <td>20</td>
-        <td>20</td>
+        <td>15</td>
+        <td>11</td>
+        <td>11</td>
         <td>0</td>
-        <td>1.8</td>
+        <td>1.6</td>
       </tr>
       
     </tbody>
@@ -320,15 +320,15 @@
      covered at
      <span class="covered_strength">
        <span class="green">
-         2.52
+         2.67
        </span>
     </span> hits/line)
   </h2>
   <a name="Models"></a>
   <div>
     <b>6</b> files in total.
-    <b>37</b> relevant lines. 
-    <span class="green"><b>37</b> lines covered</span> and
+    <b>28</b> relevant lines. 
+    <span class="green"><b>28</b> lines covered</span> and
     <span class="red"><b>0</b> lines missed </span>
   </div>
   <table class="file_list">
@@ -398,11 +398,11 @@
       <tr>
         <td class="strong"><a href="#75acc42fedbea85304738c274b96fe6044f78abd" class="src_link" title="app/models/user.rb">app/models/user.rb</a></td>
         <td class="green strong">100.0 %</td>
-        <td>24</td>
-        <td>20</td>
-        <td>20</td>
+        <td>15</td>
+        <td>11</td>
+        <td>11</td>
         <td>0</td>
-        <td>1.8</td>
+        <td>1.6</td>
       </tr>
       
     </tbody>
@@ -1627,8 +1627,8 @@
     <h3>app/models/user.rb</h3>
     <h4><span class="green">100.0 %</span> covered</h4>
     <div>
-      <b>20</b> relevant lines. 
-      <span class="green"><b>20</b> lines covered</span> and
+      <b>11</b> relevant lines. 
+      <span class="green"><b>11</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
@@ -1669,112 +1669,58 @@
         <li class="covered" data-hits="2" data-linenumber="6">
           <span class="hits">2</span>
           
-          <code class="ruby">    p &#39;1&#39;</code>
+          <code class="ruby">    where(provider: auth.provider, uid: auth.uid).first_or_initialize.tap do |u|</code>
         </li>
       
         <li class="covered" data-hits="2" data-linenumber="7">
           <span class="hits">2</span>
           
-          <code class="ruby">    where(provider: auth.provider, uid: auth.uid).first_or_initialize.tap do |u|</code>
+          <code class="ruby">      u.provider = auth.provider</code>
         </li>
       
         <li class="covered" data-hits="2" data-linenumber="8">
           <span class="hits">2</span>
           
-          <code class="ruby">      p &#39;2&#39;</code>
+          <code class="ruby">      u.uid = auth.uid</code>
         </li>
       
         <li class="covered" data-hits="2" data-linenumber="9">
           <span class="hits">2</span>
           
-          <code class="ruby">      u.provider = auth.provider</code>
+          <code class="ruby">      u.name = auth.info.name</code>
         </li>
       
         <li class="covered" data-hits="2" data-linenumber="10">
           <span class="hits">2</span>
           
-          <code class="ruby">      p &#39;3&#39;</code>
+          <code class="ruby">      u.oauth_token = auth.credentials.token</code>
         </li>
       
         <li class="covered" data-hits="2" data-linenumber="11">
           <span class="hits">2</span>
           
-          <code class="ruby">      u.uid = auth.uid</code>
+          <code class="ruby">      u.oauth_expires_at = Time.at(auth.credentials.expires_at)</code>
         </li>
       
         <li class="covered" data-hits="2" data-linenumber="12">
           <span class="hits">2</span>
           
-          <code class="ruby">      p &#39;4&#39;</code>
-        </li>
-      
-        <li class="covered" data-hits="2" data-linenumber="13">
-          <span class="hits">2</span>
-          
-          <code class="ruby">      u.name = auth.info.name</code>
-        </li>
-      
-        <li class="covered" data-hits="2" data-linenumber="14">
-          <span class="hits">2</span>
-          
-          <code class="ruby">      p &#39;5&#39;</code>
-        </li>
-      
-        <li class="covered" data-hits="2" data-linenumber="15">
-          <span class="hits">2</span>
-          
-          <code class="ruby">      p auth</code>
-        </li>
-      
-        <li class="covered" data-hits="2" data-linenumber="16">
-          <span class="hits">2</span>
-          
-          <code class="ruby">      u.oauth_token = auth.credentials.token</code>
-        </li>
-      
-        <li class="covered" data-hits="2" data-linenumber="17">
-          <span class="hits">2</span>
-          
-          <code class="ruby">      p &#39;6&#39;</code>
-        </li>
-      
-        <li class="covered" data-hits="2" data-linenumber="18">
-          <span class="hits">2</span>
-          
-          <code class="ruby">      u.oauth_expires_at = Time.at(auth.credentials.expires_at)</code>
-        </li>
-      
-        <li class="covered" data-hits="2" data-linenumber="19">
-          <span class="hits">2</span>
-          
-          <code class="ruby">      p &#39;7&#39;</code>
-        </li>
-      
-        <li class="covered" data-hits="2" data-linenumber="20">
-          <span class="hits">2</span>
-          
           <code class="ruby">      u.save!</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="21">
-          <span class="hits">2</span>
-          
-          <code class="ruby">      p &#39;8&#39;</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="22">
+        <li class="never" data-hits="" data-linenumber="13">
           
           
           <code class="ruby">    end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="23">
+        <li class="never" data-hits="" data-linenumber="14">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="24">
+        <li class="never" data-hits="" data-linenumber="15">
           
           
           <code class="ruby">end</code>
