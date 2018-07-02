@@ -1,11 +1,28 @@
 <h1> <%= @group.name %></h1>
 
+<h2>Users in this group:</h2>
 <ul> <% @group_users = GroupUser.where(group_id: @group.id) %>
   <% @group_users.each do |user| %>
   <li> <%= User.find_by(id: user.user_id).name %> </li>
   <% end %>
 </ul>
 
+<h2>Group Chat:</h2>
+<div id="group_posts">
+  <% @group_posts.each do |post| %>
+  <% @post_author = User.find_by(id: post.user_id) %>
+  <%= @post_author.name %>: <%= post.content %><br>
+  <% end %>
+</div>
+
+<br>
+
+<div id="post_form">
+  <%= form_for [@group, @post] do |form| %>
+  <%= form.label :post %>
+  <%= form.text_area :content %>
+  <%= form.submit "Send Message" %>
+  <% end %>
 
 <div class='calendar'>
   <div class='calendar-header'>
