@@ -1,0 +1,53 @@
+.calendar {
+  margin: 1rem;
+  width: 28rem;
+  font-family: 'Dosis', sans-serif;
+  border-radius: 25px;
+  box-shadow: 0 0 5px #86b0f4;
+  border: 1px solid #86b0f4;
+}
+
+.calendar-header {
+  background: #c2d8fc;
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+  color: white;
+}
+
+.calendar-month {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 5rem;
+  font-family: 'Nothing You Could Do', cursive;
+  font-size: 2.3rem;
+}
+
+.week-days {
+  display: flex;
+}
+
+.week-day {
+  height: 4rem;
+  width: 4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.days {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.day {
+  height: 4rem;
+  width: 4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.day:hover {
+  background: #c2d8fc;
+}
