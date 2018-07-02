@@ -1,6 +1,4 @@
 require 'rails_helper'
-# OmniAuth.config.test_mode = true
-
 
 RSpec.feature 'Creating a post in a group', type: :feature do
 

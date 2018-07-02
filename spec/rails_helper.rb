@@ -9,6 +9,7 @@ abort("The Rails environment is running in production mode!") if Rails.env.produ
 require 'spec_helper'
 require 'rspec/rails'
 require 'capybara'
+require 'omniauth-google-oauth2'
 # Add additional requires below this line. Rails is not loaded until this point!
 
 # Requires supporting ruby files with custom matchers and macros, etc, in
@@ -36,6 +37,19 @@ SimpleCov.formatter = SimpleCov::Formatter::MultiFormatter.new([
 ])
 
 RSpec.configure do |config|
+  OmniAuth.config.test_mode = true
+  OmniAuth.config.mock_auth[:default] = OmniAuth::AuthHash.new({
+    :provider => 'google',
+    :uid => '1337',
+    :info => {
+        :name => 'ClintEastwood',
+        :email => 'Clint@Eastwood.com'
+    },
+    :credentials => {
+      expires_at: 153_009_774_0,
+      token: "MyString"
+    }
+})
 
   # Remove this line if you're not using ActiveRecord or ActiveRecord fixtures
   config.fixture_path = "#{::Rails.root}/spec/fixtures"
