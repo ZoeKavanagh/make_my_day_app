@@ -14,7 +14,7 @@
       <img src="./assets/0.10.2/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2018-07-02T10:08:27+01:00">2018-07-02T10:08:27+01:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2018-07-02T10:24:05+01:00">2018-07-02T10:24:05+01:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -25,7 +25,7 @@
      covered at
      <span class="covered_strength">
        <span class="green">
-         2.19
+         2.28
        </span>
     </span> hits/line)
   </h2>
@@ -57,7 +57,7 @@
         <td>5</td>
         <td>5</td>
         <td>0</td>
-        <td>6.0</td>
+        <td>6.4</td>
       </tr>
       
       <tr>
@@ -77,7 +77,7 @@
         <td>5</td>
         <td>5</td>
         <td>0</td>
-        <td>2.4</td>
+        <td>2.6</td>
       </tr>
       
       <tr>
@@ -167,7 +167,7 @@
         <td>6</td>
         <td>6</td>
         <td>0</td>
-        <td>6.3</td>
+        <td>7.0</td>
       </tr>
       
       <tr>
@@ -233,7 +233,7 @@
      covered at
      <span class="covered_strength">
        <span class="green">
-         2.39
+         2.45
        </span>
     </span> hits/line)
   </h2>
@@ -265,7 +265,7 @@
         <td>5</td>
         <td>5</td>
         <td>0</td>
-        <td>6.0</td>
+        <td>6.4</td>
       </tr>
       
       <tr>
@@ -285,7 +285,7 @@
         <td>5</td>
         <td>5</td>
         <td>0</td>
-        <td>2.4</td>
+        <td>2.6</td>
       </tr>
       
       <tr>
@@ -320,7 +320,7 @@
      covered at
      <span class="covered_strength">
        <span class="green">
-         2.14
+         2.29
        </span>
     </span> hits/line)
   </h2>
@@ -352,7 +352,7 @@
         <td>6</td>
         <td>6</td>
         <td>0</td>
-        <td>6.3</td>
+        <td>7.0</td>
       </tr>
       
       <tr>
@@ -672,8 +672,8 @@
           <code class="ruby">  def current_user</code>
         </li>
       
-        <li class="covered" data-hits="26" data-linenumber="6">
-          <span class="hits">26</span>
+        <li class="covered" data-hits="28" data-linenumber="6">
+          <span class="hits">28</span>
           
           <code class="ruby">    @current_user ||= User.find(session[:user_id]) if session[:user_id]</code>
         </li>
@@ -938,8 +938,8 @@
           <code class="ruby">  def index</code>
         </li>
       
-        <li class="covered" data-hits="8" data-linenumber="7">
-          <span class="hits">8</span>
+        <li class="covered" data-hits="9" data-linenumber="7">
+          <span class="hits">9</span>
           
           <code class="ruby">    @events = ApiRequest.make_request(</code>
         </li>
@@ -1415,26 +1415,26 @@
           <code class="ruby">  def self.make_request(date, location, price_range)</code>
         </li>
       
-        <li class="covered" data-hits="9" data-linenumber="3">
-          <span class="hits">9</span>
+        <li class="covered" data-hits="10" data-linenumber="3">
+          <span class="hits">10</span>
           
           <code class="ruby">    url = &quot;https://stark-brook-82296.herokuapp.com/events?date=#{date}&amp;location=#{location}&amp;price_range=#{price_range}&quot;</code>
         </li>
       
-        <li class="covered" data-hits="9" data-linenumber="4">
-          <span class="hits">9</span>
+        <li class="covered" data-hits="10" data-linenumber="4">
+          <span class="hits">10</span>
           
           <code class="ruby">    uri = URI(url)</code>
         </li>
       
-        <li class="covered" data-hits="9" data-linenumber="5">
-          <span class="hits">9</span>
+        <li class="covered" data-hits="10" data-linenumber="5">
+          <span class="hits">10</span>
           
           <code class="ruby">    response = Net::HTTP.get(uri)</code>
         </li>
       
-        <li class="covered" data-hits="9" data-linenumber="6">
-          <span class="hits">9</span>
+        <li class="covered" data-hits="10" data-linenumber="6">
+          <span class="hits">10</span>
           
           <code class="ruby">    JSON.parse(response)</code>
         </li>

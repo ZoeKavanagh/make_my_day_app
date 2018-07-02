@@ -26,5 +26,8 @@
 /config/master.key
 
 
+# Ignore test-related files
+/coverage.data
 /coverage/
 
+.gitignore
