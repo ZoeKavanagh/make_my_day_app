@@ -89,22 +89,22 @@
         1,
         1,
         1,
-        0,
-        0,
-        0,
+        1,
+        1,
+        1,
         null,
         null,
         1,
         null,
         1,
-        0,
+        1,
         null,
         null
       ],
       "/Users/samworrall/Desktop/Projects/final_project/make_my_day_app/app/controllers/sessions_controller.rb": [
         1,
         1,
-        1,
+        0,
         0,
         0,
         null,
@@ -154,11 +154,11 @@
         1,
         null,
         1,
-        2,
-        2,
-        2,
-        2,
-        2,
+        1,
+        1,
+        1,
+        1,
+        1,
         1,
         1,
         null,
@@ -166,6 +166,6 @@
         null
       ]
     },
-    "timestamp": 1530467646
+    "timestamp": 1530522507
   }
 }
