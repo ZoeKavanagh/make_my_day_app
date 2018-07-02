@@ -4,4 +4,28 @@
   <% @group_users.each do |user| %>
   <li> <%= User.find_by(id: user.user_id).name %> </li>
   <% end %>
-</ul
+</ul>
+
+
+<div class='calendar'>
+  <div class='calendar-header'>
+    <div class="calendar-month">July</div>
+    <div class='week-days'>
+      <div class=week-day>M</div>
+      <div class=week-day>T</div>
+      <div class=week-day>W</div>
+      <div class=week-day>T</div>
+      <div class=week-day>F</div>
+      <div class=week-day>S</div>
+      <div class=week-day>S</div>
+    </div>
+  </div>
+
+  <div class='days'>
+    <% @d = 0 %>
+    <% 31.times do %>
+      <% @d += 1 %>
+      <div class='day'> <%= @d %> </div>
+    <% end %>
+  </div>
+</div>
