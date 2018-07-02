@@ -17,7 +17,7 @@ class GroupsController < ApplicationController
 
   def show
     @group = Group.find(params[:id])
-    @group_posts = @group.posts.reverse
+    @group_posts = @group.posts
     @post = Post.new
   end
 
