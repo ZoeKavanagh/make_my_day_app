@@ -121,6 +121,7 @@
       </tr>
       
       <tr>
+
         <td class="strong"><a href="#8e9630b6d8ca307b5b16bdd989f6750169f89ed0" class="src_link" title="app/helpers/posts_helper.rb">app/helpers/posts_helper.rb</a></td>
         <td class="green strong">100.0 %</td>
         <td>2</td>
@@ -132,6 +133,7 @@
       
       <tr>
         <td class="strong"><a href="#8c1e357c213c4b2c713943b7b78e98d575a26616" class="src_link" title="app/helpers/sessions_helper.rb">app/helpers/sessions_helper.rb</a></td>
+
         <td class="green strong">100.0 %</td>
         <td>2</td>
         <td>1</td>
@@ -860,14 +862,15 @@
           <code class="ruby">    @group = Group.find(params[:id])</code>
         </li>
       
+
         <li class="missed" data-hits="0" data-linenumber="20">
           
           
-          <code class="ruby">    @group_posts = @group.posts.reverse</code>
+          <code class="ruby">    @group_posts = @group.posts</code>
         </li>
       
         <li class="missed" data-hits="0" data-linenumber="21">
-          
+
           
           <code class="ruby">    @post = Post.new</code>
         </li>
@@ -1065,7 +1068,7 @@
           
           <code class="ruby">  def create</code>
         </li>
-      
+
         <li class="missed" data-hits="0" data-linenumber="6">
           
           
@@ -1073,25 +1076,25 @@
         </li>
       
         <li class="missed" data-hits="0" data-linenumber="7">
-          
+
           
           <code class="ruby">    @post = @group.posts.create(post_params)</code>
         </li>
-      
+
         <li class="missed" data-hits="0" data-linenumber="8">
           
           
           <code class="ruby">    @post.user_id = current_user.id</code>
         </li>
-      
+
         <li class="missed" data-hits="0" data-linenumber="9">
-          
+
           
           <code class="ruby">    @post.save!</code>
         </li>
-      
+
         <li class="missed" data-hits="0" data-linenumber="10">
-          
+
           
           <code class="ruby">    redirect_to(@group)</code>
         </li>
@@ -1126,6 +1129,7 @@
           <code class="ruby">  def post_params</code>
         </li>
       
+
         <li class="missed" data-hits="0" data-linenumber="16">
           
           
@@ -1148,8 +1152,10 @@
   </pre>
 </div>
 
-      
+     
+
         <div class="source_table" id="482faf905ba2cc87105eff871b7d9813ca3b582f">
+
   <div class="header">
     <h3>app/controllers/sessions_controller.rb</h3>
     <h4><span class="red">37.5 %</span> covered</h4>
@@ -1240,7 +1246,9 @@
 </div>
 
       
+
         <div class="source_table" id="86742c66085cf32b056e54a39c5a5be791bfdfe7">
+
   <div class="header">
     <h3>app/helpers/application_helper.rb</h3>
     <h4><span class="green">100.0 %</span> covered</h4>
@@ -1270,7 +1278,7 @@
   </pre>
 </div>
 
-      
+
         <div class="source_table" id="1f37435d9bdea41bb8927b83e91b5df7c9f08950">
   <div class="header">
     <h3>app/helpers/groups_helper.rb</h3>
@@ -1425,7 +1433,7 @@
   </pre>
 </div>
 
-      
+
         <div class="source_table" id="75c1ddc1c09ecaeb950d47eed62771b79c19b0d4">
   <div class="header">
     <h3>app/models/api_request.rb</h3>
@@ -1492,7 +1500,7 @@
   </pre>
 </div>
 
-      
+
         <div class="source_table" id="b918a3d04c00f0a1e6f8d8850ad52051d592e422">
   <div class="header">
     <h3>app/models/application_record.rb</h3>
@@ -1572,7 +1580,7 @@
   </pre>
 </div>
 
-      
+
         <div class="source_table" id="155df92fbd5e70811a0088c322e660e38cd6f10b">
   <div class="header">
     <h3>app/models/group_user.rb</h3>
@@ -1615,7 +1623,7 @@
   </pre>
 </div>
 
-      
+
         <div class="source_table" id="6abdd4e273940d64470d3a6658d36c234daa787f">
   <div class="header">
     <h3>app/models/post.rb</h3>
@@ -1658,7 +1666,6 @@
   </pre>
 </div>
 
-      
         <div class="source_table" id="133c12cb3720dd1d9f478842ee57be9462a331b7">
   <div class="header">
     <h3>app/models/user.rb</h3>
