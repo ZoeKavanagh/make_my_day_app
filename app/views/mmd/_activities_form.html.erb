@@ -10,6 +10,7 @@
     <%= select_tag :category, options_for_select(['Chill', 'Active', 'Culture', 'Quirky']) %>
     <%= label_tag :budget %>
     <%= select_tag :price_range, options_for_select([1,2,3,4,5]) %>
+    <%= hidden_field_tag(:group_id) %>
     <%= submit_tag('Make My Day') %>
   <% end %>
 </div>

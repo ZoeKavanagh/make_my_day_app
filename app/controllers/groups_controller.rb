@@ -30,7 +30,7 @@ class GroupsController < ApplicationController
     )
   end
 
-  def update
+  def index
 
   end
 
