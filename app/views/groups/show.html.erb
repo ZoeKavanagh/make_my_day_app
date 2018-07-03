@@ -44,10 +44,9 @@
       <div class='post-text'>
         <%= form_for [@group, @post] do |form| %>
         <%= form.text_area :content %>
-      </div>
-
-      <div class='post-submit'>
-        <%= form.submit "Send Message" %>
+        <div class='post-submit'>
+          <%= form.submit "Send Message" %>
+        </div>
       </div>
       <% end %>
     </div>
