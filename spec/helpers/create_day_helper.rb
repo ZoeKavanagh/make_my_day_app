@@ -1,4 +1,5 @@
 def create_group
+  click_link 'Sign in with Google'
   click_link 'Make Our Day'
   fill_in 'group_name', with: 'The Group'
   page.check('group_user_ids_1')
