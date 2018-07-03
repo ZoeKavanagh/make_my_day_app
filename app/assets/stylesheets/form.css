@@ -56,3 +56,10 @@ form {
 .form input[type="submit"]:hover {
   background: #c2d8fc;
 }
+
+#make-my-day-form {
+  font-family: 'Dosis', sans-serif;
+  color: #292b2d;
+  margin: 10rem;
+  text-align: center;
+}
