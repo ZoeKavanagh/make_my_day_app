@@ -1,0 +1,15 @@
+<%= stylesheet_link_tag  'form.css' %>
+
+<div class='form'>
+  <%= form_tag(controller: 'mmd', action: 'index', method: 'get') do %>
+    <%= label_tag :date %>
+    <%= date_field_tag(:date) %>
+    <%= label_tag :location %>
+    <%= select_tag :location, options_for_select(['London', 'Edinburgh']) %>
+    <%= label_tag :category %>
+    <%= select_tag :category, options_for_select(['Chill', 'Active', 'Culture', 'Quirky']) %>
+    <%= label_tag :budget %>
+    <%= select_tag :price_range, options_for_select([1,2,3,4,5]) %>
+    <%= submit_tag('Make Our Day') %>
+  <% end %>
+</div>
