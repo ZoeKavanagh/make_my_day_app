@@ -1,50 +1,57 @@
-<h1> <%= @group.name %></h1>
+<div class='main-body'>
+  <div class='calendar'>
+    <div class='calendar-header'>
+      <div class="calendar-month">July</div>
+      <div class='week-days'>
+        <div class=week-day>M</div>
+        <div class=week-day>T</div>
+        <div class=week-day>W</div>
+        <div class=week-day>T</div>
+        <div class=week-day>F</div>
+        <div class=week-day>S</div>
+        <div class=week-day>S</div>
+      </div>
+    </div>
 
-<h2>Users in this group:</h2>
-<ul> <% @group_users = GroupUser.where(group_id: @group.id) %>
-  <% @group_users.each do |user| %>
-  <li> <%= User.find_by(id: user.user_id).name %> </li>
-  <% end %>
-</ul>
-
-<h2>Group Chat:</h2>
-<div id="group_posts">
-  <% @group_posts.each do |post| %>
-  <% @post_author = User.find_by(id: post.user_id) %>
-  <%= @post_author.name %>: <%= post.content %><br>
-  <% end %>
-</div>
-
-<br>
-
-<div id="post_form">
-  <%= form_for [@group, @post] do |form| %>
-  <%= form.label :post %>
-  <%= form.text_area :content %>
-  <%= form.submit "Send Message" %>
-  <% end %>
-
-<div class='calendar'>
-  <div class='calendar-header'>
-    <div class="calendar-month">July</div>
-    <div class='week-days'>
-      <div class=week-day>M</div>
-      <div class=week-day>T</div>
-      <div class=week-day>W</div>
-      <div class=week-day>T</div>
-      <div class=week-day>F</div>
-      <div class=week-day>S</div>
-      <div class=week-day>S</div>
+    <div class='days'>
+      <% @d = 0 %>
+      <% 31.times do %>
+        <% @d += 1 %>
+        <div class='day'> <%= @d %> </div>
+      <% end %>
     </div>
   </div>
 
-  <div class='days'>
-    <% @d = 0 %>
-    <% 31.times do %>
-      <% @d += 1 %>
-      <div class='day'> <%= @d %> </div>
-    <% end %>
+  <div class='chat'>
+    <div class='group-info'>
+      <h1> <%= @group.name %></h1>
+      <% @group_users = GroupUser.where(group_id: @group.id) %>
+      <% @group_users.each do |user| %>
+        <span> <%= User.find_by(id: user.user_id).name %>   </span>
+      <% end %>
+    </div>
+
+    <div id="group_posts">
+      <% @group_posts.each do |post| %>
+      <% @post_author = User.find_by(id: post.user_id) %>
+      <div class='post'>
+        <%= @post_author.name %>:   <em><%= post.content %></em>
+      </div>
+      <% end %>
+    </div>
+
+    <div id="post_form">
+      <div class='post-text'>
+        <%= form_for [@group, @post] do |form| %>
+        <%= form.text_area :content %>
+        <div class='post-submit'>
+          <%= form.submit "Send Message" %>
+        </div>
+      </div>
+      <% end %>
+    </div>
   </div>
+
 </div>
   
   <div id='make-my-day-form'>

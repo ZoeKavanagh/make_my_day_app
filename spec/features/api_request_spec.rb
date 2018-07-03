@@ -8,6 +8,7 @@ RSpec.feature 'API request', type: :feature do
     select('London', :from => 'location')
     select('Quirky', :from => 'category')
     select('2', :from => 'price_range')
+    select('Quirky', :from => 'category')
     click_button 'Make My Day'
     expect(page).to have_content('Swingers')
   end
