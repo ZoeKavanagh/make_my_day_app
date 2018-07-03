@@ -7,6 +7,7 @@ RSpec.feature 'API request', type: :feature do
     fill_in "date", with: '2018-07-01'
     select('London', :from => 'location')
     select('2', :from => 'price_range')
+    select('Quirky', :from => 'category')
     click_button 'Make My Day'
     expect(page).to have_content('Swingers')
   end
