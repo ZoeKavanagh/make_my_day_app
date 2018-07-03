@@ -7,7 +7,8 @@ class MmdController < ApplicationController
     @events = ApiRequest.make_request(
       params[:date],
       params[:location],
-      params[:price_range]
+      params[:price_range],
+      params[:category]
     )
   end
 end
