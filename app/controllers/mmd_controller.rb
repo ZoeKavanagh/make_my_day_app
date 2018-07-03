@@ -10,5 +10,9 @@ class MmdController < ApplicationController
       params[:price_range],
       params[:category]
     )
+
+    if @events == [] 
+      flash[:notice] = 'No event matches your request. Try again!'
+    end
   end
 end
