@@ -1,0 +1,26 @@
+<%= stylesheet_link_tag 'events.css' %>
+
+<% @events.each do |event| %>
+  <div class='event'>
+    <div class='event-img'>
+      <%= image_tag event['images'] %>
+    </div>
+
+    <div class='event-info'>
+      <div class='cat-price-loc'>
+        <div class='category'> <%= event['category'] %> </div>
+        <% event['price_range'].to_i.times do %>
+          <div class='price'>£</div>
+        <% end %>
+        <div class='location'> <%= event['location'] %> </div>
+      </div>
+
+      <h2><%= event['title'] %></h2>
+      <div class='description'>
+        <div class= 'what-is-it'>What is it?</div>
+        <%= event['description'] %>
+      </div>
+      <%= link_to 'Visit website', event['url'] %>
+    </div>
+  </div>
+<% end %>

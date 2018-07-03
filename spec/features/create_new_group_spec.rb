@@ -42,4 +42,13 @@ RSpec.feature 'Creating new group', type: :feature do
     complete_form
     expect(page).to have_content('Swingers')
   end
+
+  scenario 'Displays activities on group page' do
+    FactoryBot.create(:user, name: 'Beatrice Jerkins')
+    visit '/'
+    create_group
+    complete_form
+    expect(page).to have_current_path(groups_show_path)
+
+  end
 end
