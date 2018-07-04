@@ -10,5 +10,6 @@ class MmdController < ApplicationController
       params[:price_range],
       params[:category]
     )
+    
   end
 end

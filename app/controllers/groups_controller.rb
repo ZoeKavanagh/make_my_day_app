@@ -1,3 +1,6 @@
+require 'net/http'
+require 'json'
+
 class GroupsController < ApplicationController
   def new
     @users = User.all
@@ -19,6 +22,16 @@ class GroupsController < ApplicationController
     @group = Group.find(params[:id])
     @group_posts = @group.posts
     @post = Post.new
+    @events = ApiRequest.make_request(
+      params[:date],
+      params[:location],
+      params[:price_range],
+      params[:category]
+    )
+  end
+
+  def index
+
   end
 
   private
