@@ -32,7 +32,7 @@ RSpec.feature 'Creating new group', type: :feature do
     FactoryBot.create(:user, name: 'Beatrice Jerkins')
     visit '/'
     create_group
-    expect(page).to have_button('Make My Day')
+    expect(page).to have_button('Make Our Day')
   end
 
   scenario 'User can view activities for specified day' do
@@ -48,7 +48,7 @@ RSpec.feature 'Creating new group', type: :feature do
     visit '/'
     create_group
     complete_form
-    expect(page).to have_current_path(groups_show_path)
+    expect(page).to have_content('The Group')
 
   end
 end

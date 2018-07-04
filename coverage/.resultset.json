@@ -1,31 +1,31 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/afishcalledrob/Documents/Makers/final_project/make_my_day_app/app/helpers/application_helper.rb": [
+      "/Users/zoekavanagh/Projects/make_my_day_app/app/helpers/application_helper.rb": [
         1,
         null
       ],
-      "/Users/afishcalledrob/Documents/Makers/final_project/make_my_day_app/app/helpers/groups_helper.rb": [
+      "/Users/zoekavanagh/Projects/make_my_day_app/app/helpers/groups_helper.rb": [
         1,
         null
       ],
-      "/Users/afishcalledrob/Documents/Makers/final_project/make_my_day_app/app/helpers/posts_helper.rb": [
+      "/Users/zoekavanagh/Projects/make_my_day_app/app/helpers/posts_helper.rb": [
         1,
         null
       ],
-      "/Users/afishcalledrob/Documents/Makers/final_project/make_my_day_app/app/helpers/sessions_helper.rb": [
+      "/Users/zoekavanagh/Projects/make_my_day_app/app/helpers/sessions_helper.rb": [
         1,
         null
       ],
-      "/Users/afishcalledrob/Documents/Makers/final_project/make_my_day_app/app/helpers/users_helper.rb": [
+      "/Users/zoekavanagh/Projects/make_my_day_app/app/helpers/users_helper.rb": [
         1,
         null
       ],
-      "/Users/afishcalledrob/Documents/Makers/final_project/make_my_day_app/app/helpers/welcome_helper.rb": [
+      "/Users/zoekavanagh/Projects/make_my_day_app/app/helpers/welcome_helper.rb": [
         1,
         null
       ],
-      "/Users/afishcalledrob/Documents/Makers/final_project/make_my_day_app/app/controllers/groups_controller.rb": [
+      "/Users/zoekavanagh/Projects/make_my_day_app/app/controllers/groups_controller.rb": [
         1,
         1,
         null,
@@ -47,10 +47,10 @@
         null,
         null,
         1,
-        8,
-        8,
-        8,
-        8,
+        10,
+        10,
+        10,
+        10,
         null,
         null,
         null,
@@ -69,7 +69,7 @@
         null,
         null
       ],
-      "/Users/afishcalledrob/Documents/Makers/final_project/make_my_day_app/app/controllers/application_controller.rb": [
+      "/Users/zoekavanagh/Projects/make_my_day_app/app/controllers/application_controller.rb": [
         1,
         1,
         1,
@@ -79,14 +79,14 @@
         null,
         null
       ],
-      "/Users/afishcalledrob/Documents/Makers/final_project/make_my_day_app/app/controllers/mmd_controller.rb": [
+      "/Users/zoekavanagh/Projects/make_my_day_app/app/controllers/mmd_controller.rb": [
         1,
         1,
         null,
         1,
         null,
         1,
-        20,
+        18,
         null,
         null,
         null,
@@ -96,7 +96,7 @@
         null,
         null
       ],
-      "/Users/afishcalledrob/Documents/Makers/final_project/make_my_day_app/app/controllers/posts_controller.rb": [
+      "/Users/zoekavanagh/Projects/make_my_day_app/app/controllers/posts_controller.rb": [
         1,
         1,
         null,
@@ -116,7 +116,7 @@
         null,
         null
       ],
-      "/Users/afishcalledrob/Documents/Makers/final_project/make_my_day_app/app/controllers/sessions_controller.rb": [
+      "/Users/zoekavanagh/Projects/make_my_day_app/app/controllers/sessions_controller.rb": [
         1,
         1,
         6,
@@ -130,7 +130,7 @@
         null,
         null
       ],
-      "/Users/afishcalledrob/Documents/Makers/final_project/make_my_day_app/app/models/api_request.rb": [
+      "/Users/zoekavanagh/Projects/make_my_day_app/app/models/api_request.rb": [
         1,
         1,
         29,
@@ -140,30 +140,30 @@
         null,
         null
       ],
-      "/Users/afishcalledrob/Documents/Makers/final_project/make_my_day_app/app/models/application_record.rb": [
+      "/Users/zoekavanagh/Projects/make_my_day_app/app/models/application_record.rb": [
         1,
         1,
         null
       ],
-      "/Users/afishcalledrob/Documents/Makers/final_project/make_my_day_app/app/models/group.rb": [
-        1,
-        1,
-        1,
-        null
-      ],
-      "/Users/afishcalledrob/Documents/Makers/final_project/make_my_day_app/app/models/group_user.rb": [
+      "/Users/zoekavanagh/Projects/make_my_day_app/app/models/group.rb": [
         1,
         1,
         1,
         null
       ],
-      "/Users/afishcalledrob/Documents/Makers/final_project/make_my_day_app/app/models/post.rb": [
+      "/Users/zoekavanagh/Projects/make_my_day_app/app/models/group_user.rb": [
         1,
         1,
         1,
         null
       ],
-      "/Users/afishcalledrob/Documents/Makers/final_project/make_my_day_app/app/models/user.rb": [
+      "/Users/zoekavanagh/Projects/make_my_day_app/app/models/post.rb": [
+        1,
+        1,
+        1,
+        null
+      ],
+      "/Users/zoekavanagh/Projects/make_my_day_app/app/models/user.rb": [
         1,
         1,
         1,
@@ -181,6 +181,6 @@
         null
       ]
     },
-    "timestamp": 1530637502
+    "timestamp": 1530693868
   }
 }

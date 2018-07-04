@@ -11,5 +11,5 @@ def complete_form
   select('London', :from => 'location')
   select('Quirky', :from => 'category')
   select('2', :from => 'price_range')
-  click_button 'Make My Day'
+  click_button 'Make Our Day'
 end

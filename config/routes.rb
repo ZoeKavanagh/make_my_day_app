@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   post 'mmd/index'
   root 'mmd#index'
   get  'groups/new'
-  get  'groups/:id', to: 'groups#show', as: 'group'
+  post '/groups/:id', to: 'groups#show', as: 'group'
   get 'auth/:provider/callback', to: 'sessions#create'
   get 'auth/failure', to: redirect('/')
   get 'signout', to: 'sessions#destroy', as: 'signout'

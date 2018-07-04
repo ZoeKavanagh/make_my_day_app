@@ -55,10 +55,9 @@
 </div>
 
   <div id='make-my-day-form'>
-    <%= render partial: 'mmd/activities_form', locals: {group: @group.id} %>
-    <%= link_to group_path(@group) %>
+    <%= render partial: 'activities_form' %>
   </div>
 
   <div id='events'>
-    <%= render partial: 'mmd/events', locals: {events: @events} %>
+    <%= render partial: 'mmd/events' %>
   </div>
