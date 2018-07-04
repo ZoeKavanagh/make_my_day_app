@@ -1,6 +1,6 @@
 <%= stylesheet_link_tag  'form.css' %>
 
-<div class='form'>
+<div class='form' id='acitivities'>
   <%= form_tag(controller: 'mmd', action: 'index', method: 'get') do %>
     <%= label_tag :date %>
     <%= date_field_tag(:date) %>
@@ -10,7 +10,6 @@
     <%= select_tag :category, options_for_select(['Chill', 'Active', 'Culture', 'Quirky']) %>
     <%= label_tag :budget %>
     <%= select_tag :price_range, options_for_select([1,2,3,4,5]) %>
-    <%= hidden_field_tag(:group_id) %>
     <%= submit_tag('Make My Day') %>
   <% end %>
 </div>
