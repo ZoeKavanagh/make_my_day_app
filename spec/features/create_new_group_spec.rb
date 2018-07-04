@@ -1,4 +1,5 @@
 require 'rails_helper'
+require 'helpers/create_day_helper'
 
 RSpec.feature 'Creating new group', type: :feature do
   scenario 'User clicks create new group button' do
@@ -16,19 +17,38 @@ RSpec.feature 'Creating new group', type: :feature do
 
   scenario 'User can enter group name' do
     visit '/'
-    click_link 'Make Our Day'
-    fill_in 'group_name', with: 'The Group'
-    click_button 'Create Group'
+    create_group
     expect(page).to have_content('The Group')
   end
 
   scenario 'User can add other users to group' do
     FactoryBot.create(:user, name: 'Beatrice Jerkins')
     visit '/'
-    click_link 'Make Our Day'
-    fill_in 'group_name', with: 'The Group'
-    page.check('group_user_ids_1')
-    click_button 'Create Group'
+    create_group
     expect(page).to have_content('MyString')
+  end
+
+  scenario 'User can select a date' do
+    FactoryBot.create(:user, name: 'Beatrice Jerkins')
+    visit '/'
+    create_group
+    expect(page).to have_button('Make Our Day')
+  end
+
+  scenario 'User can view activities for specified day' do
+    FactoryBot.create(:user, name: 'Beatrice Jerkins')
+    visit '/'
+    create_group
+    complete_form
+    expect(page).to have_content('Swingers')
+  end
+
+  scenario 'Displays activities on group page' do
+    FactoryBot.create(:user, name: 'Beatrice Jerkins')
+    visit '/'
+    create_group
+    complete_form
+    expect(page).to have_content('The Group')
+
   end
 end
