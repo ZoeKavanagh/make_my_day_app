@@ -6,21 +6,40 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import PropTypes from 'prop-types'
 
-const Hello = props => (
-  <div>Hello {props.name}!</div>
-)
+class Day extends React.Component {
+ constructor(props) {
+   super(props);
+   this.toggleClass = this.toggleClass.bind(this);
+   this.state = {
+     active: (localStorage.getItem(`state${this.props.text}${this.props.group}`) === null ? false : (localStorage.getItem(`state${this.props.text}${this.props.group}`) == 'true' ? true : false))
+   };
 
-Hello.defaultProps = {
-  name: 'David'
-}
+ }
 
-Hello.propTypes = {
-  name: PropTypes.string
+ toggleClass() {
+   const currentState = this.state.active;
+   this.setState({ active: !currentState });
+   localStorage.setItem(`state${this.props.text}${this.props.group}`, !currentState)
+ };
+
+ render() {
+   const className = this.state.active ? 'not-available' : 'available';
+   return (
+     <div
+       className={className}
+       onClick = {this.toggleClass}
+       >
+       <p>{this.props.text}</p>
+     </div>
+   )
+ }
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-  ReactDOM.render(
-    <Hello name="React" />,
-    document.body.appendChild(document.createElement('div')),
-  )
+  var group = document.getElementById('group').innerHTML
+  var i;
+  for (i = 1; i <= 31; i++) {
+    var id =group+i.toString()
+    ReactDOM.render(<Day text={`${i}`} group={group} />, document.getElementById(id))
+  }
 })
