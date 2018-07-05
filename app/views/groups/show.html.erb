@@ -1,3 +1,6 @@
+<%= javascript_pack_tag 'hello_react' %>
+
+
 <div class='main-body'>
   <div class='calendar'>
     <div class='calendar-header'>
@@ -14,17 +17,20 @@
     </div>
 
     <div class='days'>
+      <% 6.times do %>
+        <div class='day'> </div>
+      <% end %>
       <% @d = 0 %>
       <% 31.times do %>
         <% @d += 1 %>
-        <div class='day'> <%= @d %> </div>
+        <div class='day' id='<%= @group.name + @d.to_s %>'> <%= @d %> </div>
       <% end %>
     </div>
   </div>
 
   <div class='chat'>
     <div class='group-info'>
-      <h1> <%= @group.name %></h1>
+      <h1 id='group'><%=@group.name%></h1>
       <% @group_users = GroupUser.where(group_id: @group.id) %>
       <% @group_users.each do |user| %>
         <span> <%= User.find_by(id: user.user_id).name %>   </span>

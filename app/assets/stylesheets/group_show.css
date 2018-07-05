@@ -1,3 +1,29 @@
+.available {
+  background: #78c194;
+  height: 4rem;
+  width: 4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.available:hover {
+  background-color: white
+}
+
+.not-available:hover {
+  background-color: white
+}
+
+.not-available {
+  background-color: #f76656;
+  height: 4rem;
+  width: 4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .calendar {
   margin: 1rem;
   width: 28rem;
