@@ -23,4 +23,6 @@ RSpec.feature 'API request', type: :feature do
     click_button 'Make My Day'
     expect(page).to have_content('No event matches your request. Try again!')
   end
+
+  
 end

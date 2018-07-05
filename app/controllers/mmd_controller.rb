@@ -4,6 +4,11 @@ require 'json'
 class MmdController < ApplicationController
 
   def index
+
+    if params[:date] == nil && params[:location] == nil
+      @events = []
+    else
+
     @events = ApiRequest.make_request(
       params[:date],
       params[:location],
@@ -11,8 +16,9 @@ class MmdController < ApplicationController
       params[:category]
     )
 
-    if @events == [] 
-      flash[:notice] = 'No event matches your request. Try again!'
+      if @events == [] 
+        flash[:notice] = 'No event matches your request. Try again!'
+      end
     end
   end
 end

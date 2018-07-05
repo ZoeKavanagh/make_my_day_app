@@ -20,6 +20,7 @@ Bundler.require(*Rails.groups)
 module MakeMyDayApp
   class Application < Rails::Application
     # Initialize configuration defaults for originally generated Rails version.
+    config.exceptions_app = self.routes
     config.load_defaults 5.2
 
 
