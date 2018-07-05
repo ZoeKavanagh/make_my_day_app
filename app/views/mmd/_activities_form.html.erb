@@ -12,4 +12,5 @@
     <%= select_tag :price_range, options_for_select([1,2,3,4,5]) %>
     <%= submit_tag('Make My Day') %>
   <% end %>
+  <%= flash[:notice] %>
 </div>

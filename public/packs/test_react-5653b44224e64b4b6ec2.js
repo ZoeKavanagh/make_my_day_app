@@ -57,14 +57,74 @@
 /******/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
 /******/
 /******/ 	// __webpack_public_path__
-/******/ 	__webpack_require__.p = "/packs-test/";
+/******/ 	__webpack_require__.p = "/packs/";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 25);
+/******/ 	return __webpack_require__(__webpack_require__.s = 55);
 /******/ })
 /************************************************************************/
 /******/ ([
 /* 0 */
+/*!*************************************!*\
+  !*** ./node_modules/react/index.js ***!
+  \*************************************/
+/*! dynamic exports provided */
+/*! all exports used */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+if (false) {
+  module.exports = require('./cjs/react.production.min.js');
+} else {
+  module.exports = __webpack_require__(/*! ./cjs/react.development.js */ 13);
+}
+
+
+/***/ }),
+/* 1 */
+/*!******************************************!*\
+  !*** ./node_modules/prop-types/index.js ***!
+  \******************************************/
+/*! dynamic exports provided */
+/*! all exports used */
+/***/ (function(module, exports, __webpack_require__) {
+
+/**
+ * Copyright (c) 2013-present, Facebook, Inc.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+
+if (true) {
+  var REACT_ELEMENT_TYPE = (typeof Symbol === 'function' &&
+    Symbol.for &&
+    Symbol.for('react.element')) ||
+    0xeac7;
+
+  var isValidElement = function(object) {
+    return typeof object === 'object' &&
+      object !== null &&
+      object.$$typeof === REACT_ELEMENT_TYPE;
+  };
+
+  // By explicitly using `prop-types` you are opting into new development behavior.
+  // http://fb.me/prop-types-in-prod
+  var throwOnDirectAccess = true;
+  module.exports = __webpack_require__(/*! ./factoryWithTypeCheckers */ 26)(isValidElement, throwOnDirectAccess);
+} else {
+  // By explicitly using `prop-types` you are opting into new production behavior.
+  // http://fb.me/prop-types-in-prod
+  module.exports = require('./factoryWithThrowingShims')();
+}
+
+
+/***/ }),
+/* 2 */,
+/* 3 */,
+/* 4 */
 /*!*********************************************!*\
   !*** ./node_modules/object-assign/index.js ***!
   \*********************************************/
@@ -166,7 +226,7 @@ module.exports = shouldUseNative() ? Object.assign : function (target, source) {
 
 
 /***/ }),
-/* 1 */
+/* 5 */
 /*!************************************************!*\
   !*** ./node_modules/fbjs/lib/emptyFunction.js ***!
   \************************************************/
@@ -213,7 +273,7 @@ emptyFunction.thatReturnsArgument = function (arg) {
 module.exports = emptyFunction;
 
 /***/ }),
-/* 2 */
+/* 6 */
 /*!***************************************************!*\
   !*** ./node_modules/prop-types/checkPropTypes.js ***!
   \***************************************************/
@@ -234,7 +294,7 @@ module.exports = emptyFunction;
 var printWarning = function() {};
 
 if (true) {
-  var ReactPropTypesSecret = __webpack_require__(/*! ./lib/ReactPropTypesSecret */ 7);
+  var ReactPropTypesSecret = __webpack_require__(/*! ./lib/ReactPropTypesSecret */ 10);
   var loggedTypeFailures = {};
 
   printWarning = function(text) {
@@ -316,26 +376,7 @@ module.exports = checkPropTypes;
 
 
 /***/ }),
-/* 3 */
-/*!*************************************!*\
-  !*** ./node_modules/react/index.js ***!
-  \*************************************/
-/*! dynamic exports provided */
-/*! all exports used */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-if (false) {
-  module.exports = require('./cjs/react.production.min.js');
-} else {
-  module.exports = __webpack_require__(/*! ./cjs/react.development.js */ 8);
-}
-
-
-/***/ }),
-/* 4 */
+/* 7 */
 /*!********************************************!*\
   !*** ./node_modules/fbjs/lib/invariant.js ***!
   \********************************************/
@@ -399,7 +440,7 @@ function invariant(condition, format, a, b, c, d, e, f) {
 module.exports = invariant;
 
 /***/ }),
-/* 5 */
+/* 8 */
 /*!**********************************************!*\
   !*** ./node_modules/fbjs/lib/emptyObject.js ***!
   \**********************************************/
@@ -427,7 +468,7 @@ if (true) {
 module.exports = emptyObject;
 
 /***/ }),
-/* 6 */
+/* 9 */
 /*!******************************************!*\
   !*** ./node_modules/fbjs/lib/warning.js ***!
   \******************************************/
@@ -446,7 +487,7 @@ module.exports = emptyObject;
 
 
 
-var emptyFunction = __webpack_require__(/*! ./emptyFunction */ 1);
+var emptyFunction = __webpack_require__(/*! ./emptyFunction */ 5);
 
 /**
  * Similar to invariant but only logs a warning if the condition is not met.
@@ -500,7 +541,7 @@ if (true) {
 module.exports = warning;
 
 /***/ }),
-/* 7 */
+/* 10 */
 /*!*************************************************************!*\
   !*** ./node_modules/prop-types/lib/ReactPropTypesSecret.js ***!
   \*************************************************************/
@@ -524,7 +565,9 @@ module.exports = ReactPropTypesSecret;
 
 
 /***/ }),
-/* 8 */
+/* 11 */,
+/* 12 */,
+/* 13 */
 /*!*****************************************************!*\
   !*** ./node_modules/react/cjs/react.development.js ***!
   \*****************************************************/
@@ -550,12 +593,12 @@ if (true) {
   (function() {
 'use strict';
 
-var _assign = __webpack_require__(/*! object-assign */ 0);
-var invariant = __webpack_require__(/*! fbjs/lib/invariant */ 4);
-var emptyObject = __webpack_require__(/*! fbjs/lib/emptyObject */ 5);
-var warning = __webpack_require__(/*! fbjs/lib/warning */ 6);
-var emptyFunction = __webpack_require__(/*! fbjs/lib/emptyFunction */ 1);
-var checkPropTypes = __webpack_require__(/*! prop-types/checkPropTypes */ 2);
+var _assign = __webpack_require__(/*! object-assign */ 4);
+var invariant = __webpack_require__(/*! fbjs/lib/invariant */ 7);
+var emptyObject = __webpack_require__(/*! fbjs/lib/emptyObject */ 8);
+var warning = __webpack_require__(/*! fbjs/lib/warning */ 9);
+var emptyFunction = __webpack_require__(/*! fbjs/lib/emptyFunction */ 5);
+var checkPropTypes = __webpack_require__(/*! prop-types/checkPropTypes */ 6);
 
 // TODO: this is special because it gets imported during build.
 
@@ -2022,7 +2065,7 @@ module.exports = react;
 
 
 /***/ }),
-/* 9 */
+/* 14 */
 /*!*****************************************!*\
   !*** ./node_modules/react-dom/index.js ***!
   \*****************************************/
@@ -2067,12 +2110,12 @@ if (false) {
   checkDCE();
   module.exports = require('./cjs/react-dom.production.min.js');
 } else {
-  module.exports = __webpack_require__(/*! ./cjs/react-dom.development.js */ 10);
+  module.exports = __webpack_require__(/*! ./cjs/react-dom.development.js */ 15);
 }
 
 
 /***/ }),
-/* 10 */
+/* 15 */
 /*!*************************************************************!*\
   !*** ./node_modules/react-dom/cjs/react-dom.development.js ***!
   \*************************************************************/
@@ -2098,19 +2141,19 @@ if (true) {
   (function() {
 'use strict';
 
-var invariant = __webpack_require__(/*! fbjs/lib/invariant */ 4);
-var React = __webpack_require__(/*! react */ 3);
-var warning = __webpack_require__(/*! fbjs/lib/warning */ 6);
-var ExecutionEnvironment = __webpack_require__(/*! fbjs/lib/ExecutionEnvironment */ 11);
-var _assign = __webpack_require__(/*! object-assign */ 0);
-var emptyFunction = __webpack_require__(/*! fbjs/lib/emptyFunction */ 1);
-var checkPropTypes = __webpack_require__(/*! prop-types/checkPropTypes */ 2);
-var getActiveElement = __webpack_require__(/*! fbjs/lib/getActiveElement */ 12);
-var shallowEqual = __webpack_require__(/*! fbjs/lib/shallowEqual */ 13);
-var containsNode = __webpack_require__(/*! fbjs/lib/containsNode */ 14);
-var emptyObject = __webpack_require__(/*! fbjs/lib/emptyObject */ 5);
-var hyphenateStyleName = __webpack_require__(/*! fbjs/lib/hyphenateStyleName */ 17);
-var camelizeStyleName = __webpack_require__(/*! fbjs/lib/camelizeStyleName */ 19);
+var invariant = __webpack_require__(/*! fbjs/lib/invariant */ 7);
+var React = __webpack_require__(/*! react */ 0);
+var warning = __webpack_require__(/*! fbjs/lib/warning */ 9);
+var ExecutionEnvironment = __webpack_require__(/*! fbjs/lib/ExecutionEnvironment */ 16);
+var _assign = __webpack_require__(/*! object-assign */ 4);
+var emptyFunction = __webpack_require__(/*! fbjs/lib/emptyFunction */ 5);
+var checkPropTypes = __webpack_require__(/*! prop-types/checkPropTypes */ 6);
+var getActiveElement = __webpack_require__(/*! fbjs/lib/getActiveElement */ 17);
+var shallowEqual = __webpack_require__(/*! fbjs/lib/shallowEqual */ 18);
+var containsNode = __webpack_require__(/*! fbjs/lib/containsNode */ 19);
+var emptyObject = __webpack_require__(/*! fbjs/lib/emptyObject */ 8);
+var hyphenateStyleName = __webpack_require__(/*! fbjs/lib/hyphenateStyleName */ 22);
+var camelizeStyleName = __webpack_require__(/*! fbjs/lib/camelizeStyleName */ 24);
 
 // Relying on the `invariant()` implementation lets us
 // have preserve the format and params in the www builds.
@@ -19514,7 +19557,7 @@ module.exports = reactDom;
 
 
 /***/ }),
-/* 11 */
+/* 16 */
 /*!*******************************************************!*\
   !*** ./node_modules/fbjs/lib/ExecutionEnvironment.js ***!
   \*******************************************************/
@@ -19558,7 +19601,7 @@ var ExecutionEnvironment = {
 module.exports = ExecutionEnvironment;
 
 /***/ }),
-/* 12 */
+/* 17 */
 /*!***************************************************!*\
   !*** ./node_modules/fbjs/lib/getActiveElement.js ***!
   \***************************************************/
@@ -19605,7 +19648,7 @@ function getActiveElement(doc) /*?DOMElement*/{
 module.exports = getActiveElement;
 
 /***/ }),
-/* 13 */
+/* 18 */
 /*!***********************************************!*\
   !*** ./node_modules/fbjs/lib/shallowEqual.js ***!
   \***********************************************/
@@ -19681,7 +19724,7 @@ function shallowEqual(objA, objB) {
 module.exports = shallowEqual;
 
 /***/ }),
-/* 14 */
+/* 19 */
 /*!***********************************************!*\
   !*** ./node_modules/fbjs/lib/containsNode.js ***!
   \***********************************************/
@@ -19701,7 +19744,7 @@ module.exports = shallowEqual;
  * 
  */
 
-var isTextNode = __webpack_require__(/*! ./isTextNode */ 15);
+var isTextNode = __webpack_require__(/*! ./isTextNode */ 20);
 
 /*eslint-disable no-bitwise */
 
@@ -19729,7 +19772,7 @@ function containsNode(outerNode, innerNode) {
 module.exports = containsNode;
 
 /***/ }),
-/* 15 */
+/* 20 */
 /*!*********************************************!*\
   !*** ./node_modules/fbjs/lib/isTextNode.js ***!
   \*********************************************/
@@ -19749,7 +19792,7 @@ module.exports = containsNode;
  * @typechecks
  */
 
-var isNode = __webpack_require__(/*! ./isNode */ 16);
+var isNode = __webpack_require__(/*! ./isNode */ 21);
 
 /**
  * @param {*} object The object to check.
@@ -19762,7 +19805,7 @@ function isTextNode(object) {
 module.exports = isTextNode;
 
 /***/ }),
-/* 16 */
+/* 21 */
 /*!*****************************************!*\
   !*** ./node_modules/fbjs/lib/isNode.js ***!
   \*****************************************/
@@ -19795,7 +19838,7 @@ function isNode(object) {
 module.exports = isNode;
 
 /***/ }),
-/* 17 */
+/* 22 */
 /*!*****************************************************!*\
   !*** ./node_modules/fbjs/lib/hyphenateStyleName.js ***!
   \*****************************************************/
@@ -19815,7 +19858,7 @@ module.exports = isNode;
 
 
 
-var hyphenate = __webpack_require__(/*! ./hyphenate */ 18);
+var hyphenate = __webpack_require__(/*! ./hyphenate */ 23);
 
 var msPattern = /^ms-/;
 
@@ -19842,7 +19885,7 @@ function hyphenateStyleName(string) {
 module.exports = hyphenateStyleName;
 
 /***/ }),
-/* 18 */
+/* 23 */
 /*!********************************************!*\
   !*** ./node_modules/fbjs/lib/hyphenate.js ***!
   \********************************************/
@@ -19883,7 +19926,7 @@ function hyphenate(string) {
 module.exports = hyphenate;
 
 /***/ }),
-/* 19 */
+/* 24 */
 /*!****************************************************!*\
   !*** ./node_modules/fbjs/lib/camelizeStyleName.js ***!
   \****************************************************/
@@ -19903,7 +19946,7 @@ module.exports = hyphenate;
 
 
 
-var camelize = __webpack_require__(/*! ./camelize */ 20);
+var camelize = __webpack_require__(/*! ./camelize */ 25);
 
 var msPattern = /^-ms-/;
 
@@ -19931,7 +19974,7 @@ function camelizeStyleName(string) {
 module.exports = camelizeStyleName;
 
 /***/ }),
-/* 20 */
+/* 25 */
 /*!*******************************************!*\
   !*** ./node_modules/fbjs/lib/camelize.js ***!
   \*******************************************/
@@ -19971,46 +20014,7 @@ function camelize(string) {
 module.exports = camelize;
 
 /***/ }),
-/* 21 */
-/*!******************************************!*\
-  !*** ./node_modules/prop-types/index.js ***!
-  \******************************************/
-/*! dynamic exports provided */
-/*! exports used: default */
-/***/ (function(module, exports, __webpack_require__) {
-
-/**
- * Copyright (c) 2013-present, Facebook, Inc.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- */
-
-if (true) {
-  var REACT_ELEMENT_TYPE = (typeof Symbol === 'function' &&
-    Symbol.for &&
-    Symbol.for('react.element')) ||
-    0xeac7;
-
-  var isValidElement = function(object) {
-    return typeof object === 'object' &&
-      object !== null &&
-      object.$$typeof === REACT_ELEMENT_TYPE;
-  };
-
-  // By explicitly using `prop-types` you are opting into new development behavior.
-  // http://fb.me/prop-types-in-prod
-  var throwOnDirectAccess = true;
-  module.exports = __webpack_require__(/*! ./factoryWithTypeCheckers */ 22)(isValidElement, throwOnDirectAccess);
-} else {
-  // By explicitly using `prop-types` you are opting into new production behavior.
-  // http://fb.me/prop-types-in-prod
-  module.exports = require('./factoryWithThrowingShims')();
-}
-
-
-/***/ }),
-/* 22 */
+/* 26 */
 /*!************************************************************!*\
   !*** ./node_modules/prop-types/factoryWithTypeCheckers.js ***!
   \************************************************************/
@@ -20028,10 +20032,10 @@ if (true) {
 
 
 
-var assign = __webpack_require__(/*! object-assign */ 0);
+var assign = __webpack_require__(/*! object-assign */ 4);
 
-var ReactPropTypesSecret = __webpack_require__(/*! ./lib/ReactPropTypesSecret */ 7);
-var checkPropTypes = __webpack_require__(/*! ./checkPropTypes */ 2);
+var ReactPropTypesSecret = __webpack_require__(/*! ./lib/ReactPropTypesSecret */ 10);
+var checkPropTypes = __webpack_require__(/*! ./checkPropTypes */ 6);
 
 var printWarning = function() {};
 
@@ -20577,9 +20581,35 @@ module.exports = function(isValidElement, throwOnDirectAccess) {
 
 
 /***/ }),
-/* 23 */,
-/* 24 */,
-/* 25 */
+/* 27 */,
+/* 28 */,
+/* 29 */,
+/* 30 */,
+/* 31 */,
+/* 32 */,
+/* 33 */,
+/* 34 */,
+/* 35 */,
+/* 36 */,
+/* 37 */,
+/* 38 */,
+/* 39 */,
+/* 40 */,
+/* 41 */,
+/* 42 */,
+/* 43 */,
+/* 44 */,
+/* 45 */,
+/* 46 */,
+/* 47 */,
+/* 48 */,
+/* 49 */,
+/* 50 */,
+/* 51 */,
+/* 52 */,
+/* 53 */,
+/* 54 */,
+/* 55 */
 /*!*********************************************!*\
   !*** ./app/javascript/packs/test_react.jsx ***!
   \*********************************************/
@@ -20589,11 +20619,11 @@ module.exports = function(isValidElement, throwOnDirectAccess) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(/*! react */ 3);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(/*! react */ 0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_dom__ = __webpack_require__(/*! react-dom */ 9);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_dom__ = __webpack_require__(/*! react-dom */ 14);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_dom___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_react_dom__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_prop_types__ = __webpack_require__(/*! prop-types */ 21);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_prop_types__ = __webpack_require__(/*! prop-types */ 1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_prop_types___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_prop_types__);
 
 
@@ -20611,4 +20641,4 @@ document.addEventListener('DOMContentLoaded', function () {
 
 /***/ })
 /******/ ]);
-//# sourceMappingURL=test_react-26ade7ba8513bf228512.js.map
+//# sourceMappingURL=test_react-5653b44224e64b4b6ec2.js.map

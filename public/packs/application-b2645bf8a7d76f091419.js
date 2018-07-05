@@ -57,15 +57,15 @@
 /******/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
 /******/
 /******/ 	// __webpack_public_path__
-/******/ 	__webpack_require__.p = "/packs-test/";
+/******/ 	__webpack_require__.p = "/packs/";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 23);
+/******/ 	return __webpack_require__(__webpack_require__.s = 35);
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ 23:
+/***/ 35:
 /*!*********************************************!*\
   !*** ./app/javascript/packs/application.js ***!
   \*********************************************/
@@ -87,4 +87,4 @@ console.log('Hello World from Webpacker');
 /***/ })
 
 /******/ });
-//# sourceMappingURL=application-462ec065012c2083d243.js.map
+//# sourceMappingURL=application-b2645bf8a7d76f091419.js.map
