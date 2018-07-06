@@ -19,6 +19,11 @@ This has been a collaborative project worked on by four developers.
 - CSS
 - ReactJS
 - PostgreSQL
+- RSpec-Rails
+- Capybara
+- OAuth
+- FactoryBot
+- AWS3
 
 
 ### User Stories
@@ -76,6 +81,8 @@ As a User,
 So that myself and my group can communicate on the site,
 I would like the group page to have a messaging section
 ```
+
+### Approach
 
 
 ### Organisation
