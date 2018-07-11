@@ -6,24 +6,18 @@ This has been a collaborative project worked on by four developers.
 
 ### Contributors
 
-- Salome Lambermont
-- Sam Worrall
-- Zoe Kavanagh
-- Robert Fishwick
+- [Salomé Lambermont](https://github.com/Slambermont)
+- [Sam Worrall](https://github.com/samworrall)
+- [Zoe Kavanagh](https://github.com/ZoeKavanagh)
+- [Robert Fishwick](https://github.com/afishcalledrob)
 
 
 ### Tech
 
-- Ruby on Rails
-- HTML
-- CSS
-- ReactJS
-- PostgreSQL
-- RSpec-Rails
-- Capybara
-- OAuth
-- FactoryBot
-- AWS3
+| Tech | Testing |
+|---|---|
+| Ruby-on-rails, Ruby, PostgreSQL, HTML, CSS, ReactJS, Simplecov, Rubocop, AWS3, OAuth | RSpec-rails, Capybara, Factory_bot_rails |
+
 
 
 ### User Stories
@@ -82,7 +76,14 @@ So that myself and my group can communicate on the site,
 I would like the group page to have a messaging section
 ```
 
-### Approach
+### Functionality
+
+A user can fill out a make my day form from the home page without logging in if they want to. A user can log in with their google account to create groups with other existing users. When creating a group, the user must give the group a name, and select the other users they want to add to the group. Once a group is created, the users share a group page, where they can chat to each other, use an interactive calendar, and fill out a make my day form.
+
+Upon completion of a make my day form, a request is sent to our [Clint API](https://github.com/afishcalledrob/clint_api), which takes the data given by the users, and returns a list of events that meets their requirements.
+
+For the purposes of this project, we created our own API and therefore seeded its database with data we had researched ourselves. As a result, the API will only respond to requests for the month of July 2018.
+
 
 
 ### Organisation
@@ -93,18 +94,40 @@ Our Trello Board:
 
 <a href="https://trello.com/b/rIRgpIkZ/make-my-day"><img src="logos/Trello.png" height="60" width="160"></a>
 
+### Finished Project
 
-### Instructions
+See the live Heroku application in action by clicking the image below. Make sure to log in with google to check out all of the functionality!:
+
+<a href="https://polar-beach-63507.herokuapp.com/"><img src="logos/Heroku.png" height="110" width="100"></a>
+
+
+### Run the application locally
 
 To run this application locally,
 Clone this repository
 ```
-git clone git@github.com:ZoeKavanagh/make_my_day_app.git
+$ git clone $ git@github.com:ZoeKavanagh/make_my_day_app.git
 ```
 
-Run rspec to make sure the tests are passing
+Install gem dependencies
 ```
-$ rspec
+$ bundle install
+```
+
+Set up the database
+```
+$ bin/rails db:create
+$ bin/rails db:migrate
+```
+
+Run RSpec to make sure the tests are passing
+```
+$ bundle exec rspec
+```
+
+Run the server
+```
+$ bin/rails server
 ```
 
 Open the app in your browser
